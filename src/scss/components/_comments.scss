@@ -1,0 +1,107 @@
+.img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0px auto;
+}
+
+.comments-area {
+    textarea, input {
+        border:1px solid #e4e4e4;
+    }
+
+    textarea {
+        width:100%;
+    }
+}
+
+.comment-list, .children {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+ul.children {
+    list-style:none;padding-left:0px; margin-left:0px;
+}
+
+.comment-wrap {
+    position: relative;
+    margin-bottom: $gap-8;
+    padding-bottom: $gap-4;
+    border-bottom: 1px solid $color-border;
+
+    .comment-img {
+        float: left;
+        margin-right: $gap-6;
+    }
+}
+
+.comment-author {
+    text-align:left;
+}
+
+.comment-reply {
+    position:absolute !important;
+    top: 0;
+    right: 0;
+    font-size: $font-size-base;
+    color: $color-primary;
+
+    a {
+        @extend .link;
+    }
+}
+
+h3.comment-reply-title, h3.comment-reply-title small {
+    font-size: $font-size-lg;
+    line-height: $line-height-base;
+}
+
+h3.comment-reply-title small {
+    @extend .link;
+    margin-left: $gap-2;
+    font-size: $font-size-base;
+    font-weight: $font-weight-normal;
+    color: $color-warning;
+}
+
+.comment-author, .comment-author a {
+    font-size: $font-size-base;
+    line-height: $line-height-sm;
+}
+.comment-date {
+    display:block;
+    padding-bottom: $gap-1;
+    font-size: $font-size-sm;
+    line-height: $line-height-sm;
+}
+
+.depth-2 .comment-wrap {padding-left:2rem;}
+.depth-3 .comment-wrap {padding-left:4rem;}
+.depth-4 .comment-wrap {padding-left:6rem;}
+.depth-5 .comment-wrap {padding-left:8rem;}
+.depth-6 .comment-wrap {padding-left:10rem;}
+.depth-7 .comment-wrap {padding-left:12rem;}
+.depth-8 .comment-wrap {padding-left:13rem;}
+.depth-9 .comment-wrap {padding-left:14rem;}
+.depth-10 .comment-wrap {padding-left:15rem;}
+
+#commentform #comment, #commentform #author,
+#commentform #email, #commentform #url {
+    width:100%;
+    display:block;
+}
+
+#commentform input[type="submit"] {
+    @extend .btn;
+    @extend .btn-primary;
+    @extend .btn-outline;
+}
+
+.title-line {
+    display: block;
+    max-width: 30%;
+    margin: 0 auto;
+    border-top: 1px dotted $color-border;
+}

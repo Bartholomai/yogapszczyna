@@ -1,0 +1,3 @@
+@if $google-font {
+  @import url('https://fonts.googleapis.com/css2?family=#{str-replace($google-font, " ", "+")}:wght@300;400;600;700;900&display=swap');
+}

@@ -1,0 +1,95 @@
+.subpage-main-section {
+  .article {
+    position: relative;
+    background-color: $color-primary;
+
+    @include media-breakpoint-up(md) {
+      height: 400px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba($color-primary, .8);
+      }
+    }
+
+    @include media-breakpoint-up(xl) {
+      height: 500px;
+    }
+
+    .image {
+      width: auto;
+      max-height: 100%;
+    }
+  }
+
+  .article-content {
+    width: 90%;
+    padding: $gap-6;
+    text-align: left;
+
+    @include media-breakpoint-up(md) {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 0;
+    }
+
+    @include media-breakpoint-up(xl) {
+      width: 82.25rem;
+    }
+  }
+}
+
+.list-benefits {
+  margin-left: $gap-4;
+  list-style: none;
+}
+
+.list-benefits-element {
+  position: relative;
+  font-size: $font-size-md;
+  line-height: $line-height-base;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: -20px;
+    width: 20px;
+    height: 20px;
+    display: block;
+    background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 40 40' width='20' height='20' xmlns='http://www.w3.org/2000/svg' xml:space='preserve' style='fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2'><path d='M20 0c11.038 0 20 8.962 20 20s-8.962 20-20 20S0 31.038 0 20 8.962 0 20 0Zm15.091 13.515-4.076-3.911-12.24 12.629-6.096-5.8-3.911 4.076 6.075 5.78 4.077 3.89.006-.006.006.006 3.928-4.06 12.231-12.604Z' style='fill:rgb(61, 218, 180)'/></svg>");
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.card-offer {
+  .card-figure {
+    min-height: 226px;
+    background-color: $color-bg-light;
+
+    @include media-breakpoint-up(md) {
+      min-height: 226px;
+    }
+  }
+}
+
+.card-partner {
+  .brand-svg {
+    max-width: 40%;
+    max-height: $gap-14;
+  }
+}

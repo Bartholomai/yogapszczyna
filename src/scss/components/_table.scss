@@ -1,0 +1,97 @@
+.table-responsive,
+.wp-block-table {
+  position: relative;
+  overflow-x: auto;
+  width: 100%;
+
+  table {
+    min-width: 720px;
+  }
+}
+
+.wp-block-table {
+  margin: $gap-16 0 $gap-8;
+  border-radius: $border-radius-lg;
+  border: 1px solid $color-light;
+  box-shadow: $shadow-box;
+
+  tr {
+
+    td,
+    th {
+      padding: $gap-3;
+      font-size: $font-size-base;
+      line-height: $line-height-sm;
+    }
+  }
+
+  &.is-style-stripes {
+
+    tbody {
+      tr {
+        &:nth-child(odd) {
+          background-color: $color-white;
+        }
+      }
+    }
+  }
+
+  figcaption {
+    padding: $gap-2 $gap-10;
+    background-color: rgba($color-light, 0.4);
+  }
+}
+
+.table,
+table {
+  margin: 0;
+  font-family: $font-family;
+  font-size: $font-size-base;
+  line-height: $line-height-sm;
+  font-weight: $font-weight-normal;
+
+  @include media-breakpoint-up(md) {
+    font-size: $font-size-lg;
+    line-height: $line-height-base;
+  }
+
+  tbody {
+    tr {
+      background-color: $color-white;
+    }
+
+    td {
+      transition: background-color .3s;
+      border-top: 1px solid $color-light;
+      vertical-align: top;
+    }
+  }
+
+  tr {
+    background-color: $color-white;
+
+    &:nth-child(odd) {
+      td {
+        background-color: rgba($color-light, 0.4);
+      }
+    }
+
+    &:hover {
+      td {
+        background-color: rgba($color-primary, 0.2);
+      }
+    }
+  }
+
+  th {
+    padding: $gap-6 $gap-2;
+    background-color: rgba($color-light, .1);
+    font-weight: $font-weight-bold;
+    vertical-align: top;
+    text-align: left;
+  }
+
+  td {
+    padding: $gap-6 $gap-4;
+  }
+}

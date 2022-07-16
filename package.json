@@ -1,0 +1,41 @@
+{
+  "name": "yogapszczyna",
+  "version": "1.0.0",
+  "author": "Bartosz Klimas",
+  "license": "GPL-2.0-or-later",
+  "keywords": [
+    "Yoga"
+  ],
+  "scripts": {
+    "autoprefixer": "postcss css/*.css --use autoprefixer -r",
+    "images": "imagesmin \"src/img/* --out-dir=img\"",
+    "lint": "eslint src/js -s",
+    "sass": "sass src/scss/main.scss css/main.css --style=compressed",
+    "uglify": "uglifyjs src/js/*.js -m -o js/app.js && uglifyjs src/js/*.js -m -c -o js/app.min.js",
+    "build:all": "npm run build:css && npm run build:images && npm run build:sass",
+    "build:css": "npm run sass && npm run autoprefixer",
+    "build:images": "npm run images",
+    "build:js": "npm run lint && npm run uglify",
+    "watch:css": "onchange \"src/scss/**/*.scss\" -- npm run build:css",
+    "watch:images": "onchange \"src/img/* -- npm run build:img\"",
+    "watch:js": "onchange \"src/js/**/*.js\" -- npm run build:js",
+    "start": "npm-run-all --parallel watch:css watch:images watch:js"
+  },
+  "devDependencies": {
+    "eslint": "^7.24.0",
+    "npm-run-all": "^4.1.5",
+    "onchange": "^7.1.0",
+    "sass": "^1.32.10",
+    "uglify-js": "^3.13.4"
+  },
+  "browserslist": [
+    "defaults"
+  ],
+  "dependencies": {
+    "autoprefixer": "^10.2.5",
+    "imagemin": "^7.0.1",
+    "jquery": "^3.6.0",
+    "postcss": "^8.2.10",
+    "postcss-cli": "^8.3.1"
+  }
+}

@@ -1,0 +1,67 @@
+.figure-thumbnail {
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  background-image: url("../svg/thumb-post.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: $color-bg-light;
+  border-radius: $border-radius;
+
+  @include media-breakpoint-up(md) {
+    min-height: 356px;
+  }
+
+  a {
+    display: inherit;
+    height: 100%;
+  }
+}
+
+.card {
+  .post-thumbnail img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.post-thumbnail {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+  margin: 0;
+  background-image: url("../svg/thumb-post.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: $color-bg-light;
+  border-radius: $border-radius-md;
+}
+
+.post-categories {
+  display: none;
+}
+
+.entry-title {
+  @extend .h2;
+}
+
+.entry-meta {
+  color: $color-muted;
+}
+
+.post-article-content {
+  position: relative;
+  z-index: 3;
+  margin-left: $gap-16;
+  margin-top: -$gap-32;
+  padding: $gap-8;
+  background: $color-white;
+  border-radius: $border-radius-md 0 0 0;
+}

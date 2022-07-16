@@ -1,0 +1,15 @@
+.container {
+  max-width: $container-width;
+  padding: 0 $gap-2;
+  margin: 0 auto;
+}
+
+.row {
+  @include make-row();
+
+  > * {
+    @include make-col-ready()
+  }
+}
+
+@include make-grid-columns();

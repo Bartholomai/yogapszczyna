@@ -1,0 +1,64 @@
+.form-control {
+  display: inline-block;
+  width: 100%;
+  appearance: none;
+  height: $input-height;
+  padding: $gap-3 $gap-4;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: $gap-6;
+  background: $color-white;
+  border-radius: $border-radius;
+  border: 1px solid $color-border;
+  outline: none;
+  -webkit-appearance: none;
+
+  transition: $transition-duration box-shadow;
+
+  &::placeholder {
+    color: $color-muted;
+  }
+
+  &:hover,
+  &.hover {
+    box-shadow: $input-focus-box-shadow;
+  }
+
+  &:focus,
+  &.focus {
+    border-color: $color-interactive;
+    box-shadow: $input-focus-box-shadow;
+  }
+
+  &:disabled,
+  &.disabled {
+    background: $input-disabled-bg;
+    cursor: default;
+    color: inherit;
+    box-shadow: none;
+  }
+
+  @at-root textarea#{&} {
+    min-height: calc(9rem + 2px);
+    resize: vertical;
+
+    &[rows] {
+      height: auto;
+    }
+  }
+
+  @at-root select#{&} {
+    background: $color-white url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><polyline points="7 10 17 10 12 15 7 10" fill="%237180B8"></polyline></svg>') no-repeat center right $gap-3;
+  }
+}
+
+.form-label {
+  display: block;
+  font-size: $font-size-base;
+  font-weight: $font-weight-normal;
+  margin-bottom: $gap-1;
+}
+
+.form-btn-container {
+  margin-top: 2.15rem;
+}

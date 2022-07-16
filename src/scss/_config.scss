@@ -1,0 +1,509 @@
+$google-font: 'Montserrat';
+$font-family: $google-font, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", sans-serif;
+
+$font-size-xl: 2rem; //32px
+$font-size-lg: 1.375rem; //22px
+$font-size-md: 1.125rem; //18px
+$font-size-base: 1rem; //16px
+$font-size-sm: 0.75rem; //12px
+
+$line-height-lg: 3rem; //48px
+$line-height-md: 2.5rem; //40px
+$line-height-base: 2rem; // 32px
+$line-height-sm: 1.5rem; //24px
+$line-height-xs: 1.125rem; //18px
+
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-semi-bold: 600;
+$font-weight-bold: 700;
+$font-weight-black: 900;
+
+$color-white: #ffffff;
+$color-black: #000000;
+
+$color-primary: #207A3C;
+$color-secondary: #FBDB3F;
+$color-success: rgb(37, 181, 141);
+$color-warning: #F58040;
+$color-error: #EF3F69;
+$color-info: #26C4F4;
+
+$color-interactive: $color-primary;
+
+$color-dark: $color-secondary;
+$color-light: #e5e5e5;
+
+$color-bg-light: #f7f7f7;
+$color-bg-gray: rgb(128, 128, 128);
+
+$color-muted: rgb(167 170 190);
+$color-muted-light: rgb(214, 214, 214);
+
+$color-border: rgb(214, 214, 214);
+
+$theme-colors: (
+  primary: $color-primary,
+  success: $color-success,
+  warning: $color-warning,
+  error: $color-error,
+  dark: $color-dark,
+  light: $color-light
+);
+
+$shadow-box: 2px 8px 16px rgb(0 0 0 / 11%);
+$shadow-box-hover: 4px 12px 16px rgb(0 0 0 / 11%);
+// Typo
+$h1-font-size: 2.5rem; //40px
+$h1-line-height: 3rem; //48px
+$h1-font-size-md: 3rem; //48px
+$h1-line-height-md: 3rem; //48px
+$h1-font-size-xl: 4.5rem; //72px
+$h1-line-height-xl: 5rem; //80px
+
+$h2-font-size: 2rem; //32px
+$h2-line-height: 2.5rem; //40px
+$h2-font-size-md: 2.5rem; //40px
+$h2-line-height-md: 2.5rem; //40px
+$h2-font-size-xl: 3.5rem; //64px
+$h2-line-height-xl: 4rem; //46px
+
+$h3-font-size: 1.5rem; //24px
+$h3-line-height: 2rem; //32px
+$h3-font-size-md: 2rem; //32px
+$h3-line-height-md: 2.5rem; //40px
+$h3-font-size-xl: 3rem; //48px
+$h3-line-height-xl: 3.5rem; //56px
+
+$h4-font-size: 1.5rem; //40px
+$h4-line-height: 2rem; //48px
+$h4-font-size-md: 1.75rem; //32px
+$h4-line-height-md: 2rem; //40px
+$h4-font-size-xl: 2.5rem; //40px
+$h4-line-height-xl: 3rem; //48px
+
+$h5-font-size: 2rem; //32px
+$h5-line-height: 2.5rem; //40px
+
+$h6-font-size: 1.5rem; //18px
+$h6-line-height: 2rem; //32px
+
+// Shadows
+$shadow-card: 0 .2rem 1.6rem rgba($color-black, .15);
+$shadow-card-hover: 0 .8rem 2.4rem rgba($color-black, .175);
+$shadow-box: 0 0 1px 0 rgba(23, 52, 110, 0.08), 4px 8px 24px 0 rgba(31, 46, 77, 0.16);
+$shadow-btn: 0 2px 2px 0 rgba(19, 38, 74, .08), 4px 4px 6px 0 rgba(19, 38, 74, .24);
+$shadow-btn-rounded: inset 0 1px 3px 0 rgba(0, 0, 0, 0.5), 0 0 0 3px #E6EEFF;
+$shadow-btn-hover: 0 2px 2px 0 rgba(19, 38, 74, .08), 4px 6px 10px 0 rgba(16, 39, 85, .32);
+
+
+$enable-important-utilities: true !default;
+
+// Spacing
+$gap-0: 0; // 0px
+$gap-1: .25rem; // 4px
+$gap-2: .5rem; // 8px
+$gap-3: .75rem; // 12px
+$gap-4: 1rem; //16px
+$gap-5: 1.25rem; //20px
+$gap-6: 1.5rem; //24px
+$gap-8: 2rem; //32px
+$gap-9: 2.25rem; //36px
+$gap-10: 2.5rem; //40px
+$gap-12: 3rem; //48px
+$gap-14: 3.5rem; //56px
+$gap-16: 4rem; //64px
+$gap-18: 4.5rem; //72px
+$gap-20: 5rem; //80px
+$gap-24: 6rem; //96px
+$gap-28: 7rem; //112px
+$gap-32: 8rem; //128px
+$gap-34: 8.5rem; //136px
+$gap-40: 10rem; //160px
+$gap-64: 16rem; //256px
+$gap-72: 18rem; //288px
+$gap-100: 25rem; //400px
+
+$spacers: (
+  0: $gap-0,
+  1: $gap-1,
+  2: $gap-2,
+  3: $gap-3,
+  4: $gap-4,
+  5: $gap-5,
+  6: $gap-6,
+  8: $gap-8,
+  10: $gap-10,
+  12: $gap-12,
+  14: $gap-14,
+  16: $gap-16,
+  18: $gap-18,
+  20: $gap-20,
+  32: $gap-32,
+  40: $gap-40,
+);
+
+$negative-spacers: (
+  n1: -$gap-1,
+  n4: -$gap-4,
+  n8: -$gap-8,
+  n12: -$gap-12,
+);
+
+// Borders
+$border-radius: $gap-1;
+$border-radius-md: $gap-2;
+$border-radius-lg: $gap-4;
+$border-radius-circle: 50%;
+$border-radius-full: 10rem;
+
+$border-radius-btn: $border-radius-md;
+
+$container-width: 82.25rem;
+
+$grid-gutter-width: $gap-8;
+$grid-columns: 12;
+$grid-row-columns: 6;
+
+$grid-breakpoints: (
+  0: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1280px,
+  xxl: 1600px,
+);
+
+$gutters: $spacers;
+
+//Transitions
+$transition-duration: .3s;
+
+$input-btn-height: $gap-14;
+$input-btn-line-height: $gap-5;
+$input-btn-padding-y: $gap-2;
+$input-btn-padding-x: $gap-8;
+
+$input-focus-box-shadow: 0 0 1px 0 rgba(23, 52, 110, .08), 4px 8px 24px 0 rgba(4, 58, 164, .24);
+$input-disabled-bg: $color-bg-light;
+
+//Inputs
+$input-height: $input-btn-height;
+$input-line-height: $input-btn-line-height;
+$input-padding-y: $input-btn-padding-y;
+$input-padding-x: $input-btn-padding-x;
+
+$btn-height: $input-btn-height;
+$btn-line-height: $input-btn-line-height;
+$btn-padding-y: $input-btn-padding-y;
+$btn-padding-x: $input-btn-padding-x;
+
+$btn-bg: $color-white;
+$btn-shadow: 0 1px 0 0 rgba(0, 25, 64, .16);
+$btn-primary-shadow: 0 2px 2px 0 rgba(19, 38, 74, .08), 4px 4px 6px 0 rgba(19, 38, 74, .16);
+
+$utilities: (
+  "display": (responsive: true,
+    print: true,
+    property: display,
+    class: d,
+    values: none inline inline-block block flex inline-flex inherit),
+  "position": (responsive: true,
+    print: true,
+    property: position,
+    class: p,
+    values: static relative absolute fixed),
+  "overflow": (responsive: true,
+    print: true,
+    property: overflow,
+    class: of,
+    values: visible hidden),
+  "z-index": (responsive: true,
+    print: true,
+    property: z-index,
+    class: index,
+    values: -1 0 1 2 10,
+  ),
+  "border": (responsive: true,
+    property: border,
+    values: (null: 1px solid $color-border,
+      0: 0,
+    )),
+  "border-color": (responsive: true,
+    property: border-color,
+    values: (white: $color-white,
+      primary: $color-primary,
+      warning: $color-warning,
+    )),
+  "border-top": (property: border-top,
+    values: (null: 1px solid $color-border,
+      0: 0,
+    )),
+  "border-right": (property: border-right,
+    values: (null: 1px solid $color-border,
+      0: 0,
+    )),
+  "border-bottom": (property: border-bottom,
+    values: (null: 1px solid $color-border,
+      0: 0,
+    )),
+  "border-left": (property: border-left,
+    values: (null: 1px solid $color-border,
+      0: 0,
+    )),
+  "width": (responsive: true,
+    property: width,
+    class: w,
+    values: (1p: 1%,
+      10p: 10%,
+      30p: 30%,
+      50p: 50%,
+      100p: 100%,
+      auto: auto,
+      6: $gap-6,
+      8: $gap-8,
+      24: $gap-24,
+      32: $gap-32 )),
+  "height": (responsive: true,
+    property: height,
+    class: h,
+    values: (1: 1%,
+      100p: 100%,
+      40: $gap-10,
+      auto: auto)),
+  "max-height": (responsive: true,
+    property: max-height,
+    class: mh,
+    values: (100p: 100%)),
+  // Flex utilities
+  "flex": (responsive: true,
+    property: flex,
+    values: (fill: 1 1 auto)),
+  "flex-direction": (responsive: true,
+    property: flex-direction,
+    class: flex,
+    values: row column),
+  "flex-grow": (responsive: true,
+    property: flex-grow,
+    class: flex,
+    values: (grow-0: 0,
+      grow-1: 1,
+    )),
+  "flex-wrap": (responsive: true,
+    property: flex-wrap,
+    class: flex,
+    values: wrap nowrap wrap-reverse),
+  "justify-content": (responsive: true,
+    property: justify-content,
+    class: justify,
+    values: (start: flex-start,
+      end: flex-end,
+      center: center,
+      between: space-between,
+      around: space-around,
+    )),
+  "align-items": (responsive: true,
+    property: align-items,
+    class: items,
+    values: (start: flex-start,
+      end: flex-end,
+      center: center,
+      baseline: baseline,
+      stretch: stretch,
+    )),
+  "align-self": (property: align-self,
+    class: align-self,
+    values: auto flex-start flex-end center baseline stretch),
+  "order": (responsive: true,
+    property: order,
+    values: (first: -1,
+      0: 0,
+      1: 1,
+      2: 2,
+      3: 3,
+      4: 4,
+      5: 5,
+      last: 9,
+    ),
+  ),
+  // Margin utilities
+  "margin": (responsive: true,
+    property: margin,
+    class: m,
+    values: map-merge($spacers, (auto: auto))),
+  "margin-x": (responsive: true,
+    property: margin-right margin-left,
+    class: mx,
+    values: map-merge($spacers, (auto: auto))),
+  "margin-y": (responsive: true,
+    property: margin-top margin-bottom,
+    class: my,
+    values: map-merge($spacers, (auto: auto))),
+  "margin-top": (responsive: true,
+    property: margin-top,
+    class: mt,
+    values: map-merge($spacers, (auto: auto))),
+  "margin-right": (responsive: true,
+    property: margin-right,
+    class: mr,
+    values: map-merge($spacers, (auto: auto))),
+  "margin-bottom": (responsive: true,
+    property: margin-bottom,
+    class: mb,
+    values: map-merge($spacers, (auto: auto))),
+  "margin-left": (responsive: true,
+    property: margin-left,
+    class: ml,
+    values: map-merge($spacers, (auto: auto))),
+  // Negative margin utilities
+  "negative-margin": (responsive: true,
+    property: margin,
+    class: m,
+    values: $negative-spacers ),
+  "negative-margin-x": (responsive: true,
+    property: margin-right margin-left,
+    class: mx,
+    values: $negative-spacers ),
+  "negative-margin-y": (responsive: true,
+    property: margin-top margin-bottom,
+    class: my,
+    values: $negative-spacers ),
+  "negative-margin-top": (responsive: true,
+    property: margin-top,
+    class: mt,
+    values: $negative-spacers ),
+  "negative-margin-right": (responsive: true,
+    property: margin-right,
+    class: mr,
+    values: $negative-spacers ),
+  "negative-margin-bottom": (responsive: true,
+    property: margin-bottom,
+    class: mb,
+    values: $negative-spacers ),
+  "negative-margin-left": (responsive: true,
+    property: margin-left,
+    class: ml,
+    values: $negative-spacers ),
+  // Padding utilities
+  "padding": (responsive: true,
+    property: padding,
+    class: p,
+    values: $spacers ),
+  "padding-x": (responsive: true,
+    property: padding-right padding-left,
+    class: px,
+    values: $spacers ),
+  "padding-y": (responsive: true,
+    property: padding-top padding-bottom,
+    class: py,
+    values: $spacers ),
+  "padding-top": (responsive: true,
+    property: padding-top,
+    class: pt,
+    values: $spacers ),
+  "padding-right": (responsive: true,
+    property: padding-right,
+    class: pr,
+    values: $spacers ),
+  "padding-bottom": (responsive: true,
+    property: padding-bottom,
+    class: pb,
+    values: $spacers ),
+  "padding-left": (responsive: true,
+    property: padding-left,
+    class: pl,
+    values: $spacers ),
+  "top": (responsive: true,
+    property: top,
+    class: top,
+    values: (10: 10%,
+      50: 50%)),
+  "right": (responsive: true,
+    property: right,
+    class: right,
+    values: map-merge($spacers, (auto: auto))),
+  "bottom": (responsive: true,
+    property: bottom,
+    class: bottom,
+    values: map-merge($spacers, (auto: auto))),
+  "left": (responsive: true,
+    property: left,
+    class: left,
+    values: map-merge($spacers, (auto: auto))),
+  "negative-top": (responsive: true,
+    property: top,
+    class: top,
+    values: $negative-spacers ),
+  "negative-right": (responsive: true,
+    property: right,
+    class: right,
+    values: $negative-spacers ),
+  //Text utilities
+  "font-size": (responsive: true,
+    property: font-size,
+    class: font-size,
+    values: (xl: $font-size-xl,
+      lg: $font-size-lg,
+      md: $font-size-md,
+      base: $font-size-base,
+      sm: $font-size-sm )),
+  "font-weight": (property: font-weight,
+    class: font,
+    values: (normal: $font-weight-normal,
+      semi-bold: $font-weight-semi-bold,
+      bold: $font-weight-bold,
+      black: $font-weight-black )),
+  "text-transform": (property: text-transform,
+    class: text,
+    values: uppercase),
+  "text-align": (responsive: true,
+    property: text-align,
+    class: text,
+    values: left right center),
+  "color": (property: color,
+    class: text,
+    values: map-merge($theme-colors,
+      ("white": $color-white,
+        "black": $color-black,
+        "dark": $color-dark,
+        "light": $color-light,
+        "muted": $color-muted,
+        "primary": $color-primary,
+        "secondary": $color-secondary,
+        "reset": inherit,
+      ))),
+  "line-height": (responsive: true,
+    property: line-height,
+    class: lh,
+    values: (1: 1,
+      reset: inherit,
+      lg : $line-height-lg,
+      md : $line-height-md,
+      base: $line-height-base,
+      sm : $line-height-sm,
+      xs : $line-height-xs )),
+  "background-color": (property: background-color,
+    class: bg,
+    values: map-merge($theme-colors,
+      ("black": $color-black,
+        "white": $color-white,
+        "error": $color-error,
+        "secondary": $color-secondary,
+        "dark": $color-dark,
+        "light": $color-bg-light,
+        "transparent": transparent,
+      ))),
+  "box-shadow": (property: box-shadow,
+    class: shadow,
+    values: (box: $shadow-box,
+    )),
+  //Border utils
+  "rounded": (property: border-radius,
+    class: rounded,
+    values: (null: $border-radius,
+      lg: $border-radius-lg,
+      md: $border-radius-md,
+      circle: $border-radius-circle,
+      0: 0,
+    ))
+);

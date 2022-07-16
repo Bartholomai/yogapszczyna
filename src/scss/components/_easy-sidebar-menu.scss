@@ -1,0 +1,30 @@
+.easy-sidebar-menu-widget-link {
+    padding-left: 1rem;
+}
+
+.widget_easy_sidebar_menu_widget {
+    li.menu-item {
+        border-bottom: none;
+
+        .easy-sidebar-menu-widget-link {
+            padding-left: 1rem;
+        }
+
+        .sub-menu li:first-child {
+            border-top: none;
+
+            &::before {
+                content: none;
+            }
+        }
+
+        .easy-sidebar-menu-widget-toggler {
+            border: none;
+
+            &:focus {
+                border: none;
+                background-color: transparent;
+            }
+        }
+    }
+}

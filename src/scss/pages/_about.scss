@@ -1,0 +1,13 @@
+.card-hardware {
+  height: 100%;
+  margin-bottom: $gap-8 ;
+
+  @include media-breakpoint-up(md) {
+    margin-bottom: 0;
+  }
+
+  .image {
+    height: $gap-10;
+    margin-bottom: $gap-4;
+  }
+}

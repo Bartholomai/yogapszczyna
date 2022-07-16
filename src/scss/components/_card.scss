@@ -1,0 +1,36 @@
+.card {
+  transition: box-shadow 0.25s;
+  position: relative;
+  overflow: hidden;
+  box-shadow: $shadow-card;
+  border-radius: $border-radius-lg;
+
+  &:hover {
+    box-shadow: $shadow-card-hover;
+  }
+}
+
+.card-hover {
+  transition: box-shadow 0.25s;
+
+  &:hover {
+    box-shadow: $shadow-card-hover;
+  }
+}
+
+.card-opinion {
+  margin-bottom: $gap-6;
+  padding: $gap-6;
+}
+
+.card-clickable {
+  &:hover {
+    .link {
+      &:before {
+        visibility: visible;
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+      }
+    }
+  }
+}

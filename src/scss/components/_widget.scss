@@ -1,0 +1,11 @@
+%widget {
+  margin-bottom: $gap-8;
+}
+
+h2.widgettitle,
+.widget-title {
+  margin-bottom: $gap-4;
+  font-size: $font-size-base;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-base;
+}

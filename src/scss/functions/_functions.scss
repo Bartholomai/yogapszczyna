@@ -1,0 +1,49 @@
+@use "sass:math";
+
+@function negativify-map($map) {
+  $result: ();
+  @each $key, $value in $map {
+    @if $key != 0 {
+      $result: map-merge($result, ("n" + $key: (-$value)));
+    }
+  }
+  @return $result;
+}
+
+@function px2rem($px) {
+  @return math.div($px, 16px) * 1rem;
+}
+
+@function hex2rgb($hex) {
+  @return "#{red($hex)},#{green($hex)},#{blue($hex)}";
+}
+
+@function str-replace($string, $search, $replace: "") {
+  $index: str-index($string, $search);
+
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+
+  @return $string;
+}
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint);
+
+    @each $key, $utility in $utilities {
+      @if type-of($utility) == "map" and (map-get($utility, responsive) or $infix == "") {
+        @include generate-utility($utility, $infix);
+      }
+    }
+  }
+}
+
+@media print {
+  @each $key, $utility in $utilities {
+    @if type-of($utility) == "map" and map-get($utility, print) == true {
+      @include generate-utility($utility, "-print");
+    }
+  }
+}

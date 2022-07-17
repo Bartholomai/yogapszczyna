@@ -24,14 +24,14 @@ $color-black: #000000;
 
 $color-primary: #207A3C;
 $color-secondary: #FBDB3F;
-$color-success: rgb(37, 181, 141);
+$color-success: #25b58d;
 $color-warning: #F58040;
 $color-error: #EF3F69;
 $color-info: #26C4F4;
 
 $color-interactive: $color-primary;
 
-$color-dark: $color-secondary;
+$color-dark: $color-black;
 $color-light: #e5e5e5;
 
 $color-bg-light: #f7f7f7;
@@ -450,6 +450,7 @@ $utilities: (
   "font-weight": (property: font-weight,
     class: font,
     values: (normal: $font-weight-normal,
+      light: $font-weight-light,
       semi-bold: $font-weight-semi-bold,
       bold: $font-weight-bold,
       black: $font-weight-black )),

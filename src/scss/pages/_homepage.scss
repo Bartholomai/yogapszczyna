@@ -1,9 +1,13 @@
 .section-main {
   padding: $gap-16 0;
-  background-color: $color-black;
+  background-color: rgba($color-primary, .2);
 
   @include media-breakpoint-up(md) {
     padding: $gap-64 0;
+  }
+
+  .header {
+    line-height: 5rem;
   }
 
   .article {
@@ -47,8 +51,4 @@
       max-width: $gap-28;
     }
   }
-}
-
-.service-icon {
-  width: $gap-24;
 }

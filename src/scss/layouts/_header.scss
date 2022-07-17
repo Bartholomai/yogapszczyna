@@ -2,9 +2,24 @@
   position: relative;
   z-index: 9;
 
+  .site-branding-link {
+    display: flex;
+    align-items: center;
+  }
+
+  .site-branding-title {
+    margin-bottom: 0;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    font-weight: $font-weight-light;
+    text-transform: uppercase;
+  }
+
+  .site-branding-subtitle {}
+
   .menu-item.menu-item-has-children {
 
-    &> a {
+    &>a {
       position: relative;
       padding-right: $gap-6;
 
@@ -32,7 +47,7 @@
     }
 
     &:hover {
-      &> a {
+      &>a {
         &::before {
           transform: rotate(-45deg);
         }
@@ -59,18 +74,18 @@
       span {
 
         &:nth-child(1) {
-          -webkit-animation:inT .4s forwards;
-          animation:inT 0.4s forwards;
+          -webkit-animation: inT .4s forwards;
+          animation: inT 0.4s forwards;
         }
 
         &:nth-child(2) {
-          -webkit-animation:inM .4s forwards;
-          animation:inM .4s forwards;
+          -webkit-animation: inM .4s forwards;
+          animation: inM .4s forwards;
         }
 
         &:nth-child(3) {
-          -webkit-animation:inBtm .4s forwards;
-          animation:inBtm .4s forwards;
+          -webkit-animation: inBtm .4s forwards;
+          animation: inBtm .4s forwards;
         }
       }
 
@@ -121,7 +136,9 @@
   }
 
   .menu-secondary-menu-container {
-    ul, li.menu-item {
+
+    ul,
+    li.menu-item {
       margin: 0;
       padding: 0;
     }
@@ -183,15 +200,11 @@
 
 .site-branding-svg {
   transition: all $transition-duration ease-in-out;
-  width: $gap-34;
+  width: $gap-14;
 
   @include media-breakpoint-up(md) {
-    width: $gap-40;
+    width: $gap-16;
   }
-}
-
-.site-header-main {
-  background-color: $color-black;
 }
 
 .btn-body-container {

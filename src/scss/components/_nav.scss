@@ -14,7 +14,7 @@
   margin: 0;
   padding: 0;
   background-color: $color-secondary;
-  box-shadow: 0 2.5rem 1.5rem rgba($color-dark, .25) ;
+  box-shadow: 0 2.5rem 1.5rem rgba($color-dark, .25);
   list-style: none;
 
   @include media-breakpoint-up(md) {
@@ -72,7 +72,8 @@
     }
   }
 
-  .menu-item a {
+  .menu-item a,
+  .page_item a {
     transition: color .25s ease-in-out;
     position: relative;
     display: flex;
@@ -82,7 +83,7 @@
     font-size: $font-size-md;
     font-weight: $font-weight-normal;
     line-height: 5rem;
-    color: $color-white;
+    color: $color-black;
 
     &:hover {
       color: $color-primary;

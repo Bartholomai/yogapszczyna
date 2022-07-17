@@ -49,7 +49,8 @@ function yogapszczyna_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
 		array(
-			'menu-1' => esc_html__( 'Primary', 'yogapszczyna' ),
+			'menu-primary' => esc_html__( 'Primary', 'yogapszczyna' ),
+			'menu-secondary' => esc_html__( 'Secondary', 'yogapszczyna' ),
 		)
 	);
 
@@ -151,6 +152,20 @@ function yogapszczyna_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'yogapszczyna_scripts' );
+
+/**
+ * Enqueue scripts and login styles.
+ */
+function my_login_stylesheet() {
+	wp_enqueue_style( 'custom-login', get_stylesheet_directory_uri() . '/css/style-login.css' );
+}
+add_action( 'login_enqueue_scripts', 'my_login_stylesheet' );
+
+add_action('wp_default_scripts', function ($scripts) {
+	if (!empty($scripts->registered['jquery'])) {
+			$scripts->registered['jquery']->deps = array_diff($scripts->registered['jquery']->deps, ['jquery-migrate']);
+	}
+});
 
 /**
  * Implement the Custom Header feature.
